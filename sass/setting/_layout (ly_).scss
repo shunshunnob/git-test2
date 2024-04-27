@@ -1,0 +1,47 @@
+/* 以下はレイアウトパーツのCSSです。 */
+:root {
+ /* コンテンツ幅管理用の変数 */
+    --content-width-sm: 496px;
+    --content-width: 672px;
+    --content-width-lg: 1024px;
+  }
+
+.ly_container-sm {
+    max-width: calc(var(--content-width-sm) + 32px);
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  
+  .ly_container {
+    max-width: calc(var(--content-width) + 32px);
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  .ly_sections{
+    padding-bottom: 72px;
+  }
+  
+  .ly_container-lg {
+    max-width: calc(var(--content-width-lg) + 32px);
+    padding:0 16px;
+    margin: 0 auto;
+  }
+  .ly_contents {
+    padding: 80px 0;
+  }
+  @media screen and (min-width: 1080px) {
+    .ly_contents-pc{
+      padding: 120px 0;
+    }
+  }
+.ly_header-inner{
+    display: flex;
+    padding:0 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: 1080px) {
+    .ly_header-inner{
+      padding: 0 0 0 32px;
+    }
+  }

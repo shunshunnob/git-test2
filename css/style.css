@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/* ------------------------------ */
+/* 167行目まではリセット用のCSS です。*/
+/* ------------------------------ */
+html {
+  color: #000;
+  background: #fff;
+  font-size: 62.5%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  border-radius: 0;
+  border: none;
+  background-color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  display: block;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+legend {
+  color: #000;
+}
+
+main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+svg {
+  display: block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 以下はレイアウトパーツのCSSです。 */
+:root {
+  /* コンテンツ幅管理用の変数 */
+  --content-width-sm: 496px;
+  --content-width: 672px;
+  --content-width-lg: 1024px;
+}
+
+.ly_container-sm {
+  max-width: calc(var(--content-width-sm) + 32px);
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.ly_container {
+  max-width: calc(var(--content-width) + 32px);
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.ly_sections {
+  padding-bottom: 72px;
+}
+
+.ly_container-lg {
+  max-width: calc(var(--content-width-lg) + 32px);
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.ly_contents {
+  padding: 80px 0;
+}
+
+@media screen and (min-width: 1080px) {
+  .ly_contents-pc {
+    padding: 120px 0;
+  }
+}
+.ly_header-inner {
+  display: flex;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1080px) {
+  .ly_header-inner {
+    padding: 0 0 0 32px;
+  }
+}
+.bl_header {
+  height: 80px;
+}
+
+.bl_header_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-color);
+  z-index: var(--z-index-header);
+}
+
+@media screen and (min-width: 768px) {
+  .bl_header_nav {
+    position: static;
+    background: transparent;
+    width: auto;
+    height: 100%;
+    opacity: 1;
+    pointer-events: inherit;
+  }
+}
+.bl_header_nav-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 375px;
+  padding: 0 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .bl_header_nav-list {
+    display: flex;
+    position: static;
+    transform: none;
+    height: 100%;
+  }
+}
+.bl_header_nav-item {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .bl_header_nav-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.bl_header_nav-item:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .bl_header_nav-item:not(:first-child) {
+    margin-top: 0;
+  }
+}
+.bl_header_nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .bl_header_nav-link {
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.bl_header_text-en {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.bl_header_text-en::after {
+  content: "";
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-color);
+  height: 1px;
+  width: 88px;
+  margin-left: 24px;
+}
+
+.bl_header_text-ja {
+  font-size: 1.4rem;
+  font-family: var(--sub-font);
+  white-space: nowrap;
+  margin-left: 24px;
+  width: auto;
+}
+
+.bl_header_accordion-body {
+  margin-top: 24px;
+}
+
+.bl_header_accordion-list {
+  margin-left: 32px;
+  height: 0;
+  transition: 0.3s;
+}
+
+.bl_header_accordion-list.is_open {
+  height: 120px;
+}
+
+.bl_header_accordion-item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.bl_hamburger {
+  width: 40px;
+  height: 32px;
+  position: relative;
+  z-index: var(--z-index-menu);
+}
+
+@media screen and (min-width: 768px) {
+  .bl_hamburger {
+    display: none;
+  }
+}
+.bl_hamburger_bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background: var(--black-color);
+  left: 50%;
+  transition: 0.3s;
+}
+
+.bl_hamburger_bar:first-child {
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.bl_hamburger_bar:nth-child(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bl_hamburger_bar:last-child {
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+.js_navigation.is-active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.js_hamburger.is-active .bl_hamburger_bar:first-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.js_hamburger.is-active .bl_hamburger_bar:nth-child(2) {
+  opacity: 0;
+}
+
+.js_hamburger.is-active .bl_hamburger_bar:last-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+
+.js_navigation {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .js_navigation {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+.js_navigation.is-active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.bl_service_ttl {
+  font-size: 7rem;
+  font-family: var(--section-font);
+  color: var(--gray-color02);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.el_logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.un_kv_contents {
+  margin-top: 60px;
+  padding: 0 16px;
+}
+
+.un_kv {
+  position: relative;
+  height: 330px;
+}
+
+.un_kv_txt {
+  font-size: 4.7rem;
+  font-family: var(--kv-font);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.un_kv_img-box {
+  width: 224px;
+  height: 224px;
+  position: absolute;
+  right: -2px;
+  top: 26%;
+  z-index: -1;
+}
+
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  top: 100%;
+  left: 24px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+  /*描画位置*/
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  /*テキストの形状*/
+  color: #000;
+  font-size: 1.6rem;
+  /*縦書き設定*/
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+  /*丸の形状*/
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation: circlemove 2.2s ease-in-out infinite, cirlemovehide 2.2s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 60px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 線の描写 */
+.scrolldown2:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 4px;
+  height: 80px;
+  background: #000;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+:root {
+  /* 色管理用の変数 */
+  --black-color: #001C2B;
+  --white-color: #fff;
+  --gray-color: #d9d9d9;
+  --gray-color02: #6b6767;
+  --gray-color03: #aaa;
+  --gray-color04: #707070;
+  --primary-color: #43cfe8;
+  --primary-color02: #ddf4f6;
+  --accent-color: #e84d43;
+}
+
+:root {
+  /* z-index管理用の変数 */
+  --z-index-back: -1;
+  --z-index-default: 1;
+  --z-index-header: 100;
+  --z-index-menu: 150;
+  --z-index-modal: 200;
+}
+
+:root {
+  /* コンテンツ幅管理用の変数 */
+  --content-width-sm: 496px;
+  --content-width: 672px;
+  --content-width-lg: 1024px;
+}
+
+:root {
+  --main-font:"lato-regular",sans-serif;
+  --sub-font:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  --kv-font:"bradley-hand-itc",sans-serif;
+  --section-font:"cormorantGaramond-semibold";
+  --light-gothic:"Yu Gothic Light",sans-serif;
+  --bold-gothic:"Yu Gothic bold",sans-serif;
+}
+@font-face {
+  font-family: "lato-regular";
+  src: url(../fonts/Lato-Regular.ttf) format(truetype);
+}
+@font-face {
+  font-family: "bradley-hand-itc";
+  src: url(../fonts/bradley-hand-itc.ttf) format(truetype);
+}
+@font-face {
+  font-family: "cormorantGaramond-semibold";
+  src: url(../fonts/CormorantGaramond-SemiBold.ttf) format(truetype);
+}
+@font-face {
+  font-family: "Yu Gothic Light";
+  src: url(../fonts/yu-gothic-light.ttf) format(truetype);
+}
+@font-face {
+  font-family: "Yu Gothic bold";
+  src: url(../fonts/yu-gothic-bold.ttf) format(truetype);
+}
+
+body.is-active {
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

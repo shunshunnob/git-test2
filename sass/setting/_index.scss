@@ -1,0 +1,8 @@
+// こちらはすべてのscssファイルを一旦まとめてstyle.scssファイルに読み込ませるための中継ファイルです。
+@forward 'reset';
+@forward 'layout (ly_)';
+@forward 'Block (bl_)';
+@forward 'Element (el_)';
+@forward 'Unique (un_)';
+@forward 'Helper (hp_)';
+@forward 'Program (js_)(is_)';

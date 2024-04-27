@@ -1,0 +1,70 @@
+// こちらは全てのSCSSファイルを取り込んでstyle.cssとして出力するためのファイルです。
+@charset "utf-8";
+@use 'setting/index';
+html{
+  font-size: 10px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+}
+:root {
+  /* 色管理用の変数 */
+  --black-color: #001C2B;
+  --white-color: #fff;
+  --gray-color: #d9d9d9;
+  --gray-color02: #6b6767;
+  --gray-color03: #aaa;
+  --gray-color04: #707070;
+  --primary-color: #43cfe8;
+  --primary-color02: #ddf4f6;
+  --accent-color: #e84d43;
+}
+
+ :root{
+  /* z-index管理用の変数 */
+  --z-index-back: -1;
+  --z-index-default: 1;
+  --z-index-header: 100;
+  --z-index-menu: 150;
+  --z-index-modal: 200;
+ }
+ :root {
+  /* コンテンツ幅管理用の変数 */
+  --content-width-sm: 496px;
+  --content-width: 672px;
+  --content-width-lg: 1024px;
+}:root{
+  //  フォントの指定
+  @font-face {
+    font-family: 'lato-regular' ;
+    src: url(../fonts/Lato-Regular.ttf) format(truetype);
+  }
+  @font-face {
+    font-family: 'bradley-hand-itc';
+    src: url(../fonts/bradley-hand-itc.ttf) format(truetype);
+  }
+  @font-face {
+    font-family: 'cormorantGaramond-semibold';
+    src: url(../fonts/CormorantGaramond-SemiBold.ttf)format(truetype);
+  }
+  @font-face {
+    font-family: 'Yu Gothic Light';
+    src: url(../fonts/yu-gothic-light.ttf)format(truetype);
+  }
+  @font-face {
+    font-family: 'Yu Gothic bold';
+    src: url(../fonts/yu-gothic-bold.ttf)format(truetype);
+  }
+  --main-font:'lato-regular',sans-serif;
+  --sub-font:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  --kv-font:'bradley-hand-itc',sans-serif;
+  --section-font:'cormorantGaramond-semibold';
+  --light-gothic:'Yu Gothic Light',sans-serif;
+  --bold-gothic:'Yu Gothic bold',sans-serif;
+ }
+body.is-active{
+  overflow: hidden;
+}
+
+
+
+
