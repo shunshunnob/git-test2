@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web制作・デザインのお問い合わせ</title>
+    <meta name="description" content="WEBデザイン、WEB制作をフリーランスで行っています。「WEB制作を依頼したい」「WEB制作料金の相場が分からない」といった方ぜひお問い合わせくださいませ"/>
+    <meta name="format-detection" content="telephone=no" />
+    
+    <link rel="icon" href="img/favicon.ico" type="image/svg+xml" />
+    <!-- web-clip-icon.pngファイル -->
+    <link rel="apple-touch-icon" href="img/favicon.ico" />
+    <!-- ogp -->
+    <meta property="og:site_name" content="Tiice|WEB制作・デザイン" />
+    <meta property="og:url" content="http://127.0.0.1:5501/contact.html" />
+    <meta property="og:image" content="http://127.0.0.1:5501/index.html/img/logo-img.svg">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Web制作・デザインのお問い合わせ" />
+    <meta property="og:description" content="こちらはお問い合わせページです。"/>
+    <meta property="og:locale" content="ja_JP" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- 以下は場合によって必要 -->
+    <!-- <meta name="robots" content="noindex,nofollow"> -->
+    <!-- google fonts -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+    <script src="js/main.js" defer></script>
+
+
+</head>
+<body>
+    <header class="bl_header ly_header-inner">
+        <h1 class="el_logo"><a href="index.html" class="el_logo-link"><img src="img/logo-img.svg" alt="Tiice" class="el_logo_img" width="84" height="44"></a><!-- /.l_header-inner_logo-link --></h1><!-- /.l_header-inner_logo -->
+  </header><!-- /.header -->
+  <div class="ly_container-sm ">
+    <form action="#" class="bl_contact-form">
+      <dl class="bl_contact-form_list">
+          <dt class="bl_contact-form_head"><label for="company" class="bl_contact-form_label">会社名</label><!-- /.bl_contact-form_label --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <input type="text" id="company" name="company" class="bl_contact-form_input">
+              <span class="bl_contact-form_example">例.株式会社SAMPLE</span><!-- /.bl_contact-form_example -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head"><label for="name" class="bl_contact-form_label">お名前</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <input type="text" id="name" name="name" class="bl_contact-form_input" required>
+              <span class="bl_contact-form_example">例.山田太郎</span><!-- /.bl_contact-form_example -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head"><label for="furigana" class="bl_contact-form_label">フリガナ</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <input type="text" id="furigana" name="furigana" class="bl_contact-form_input" required>
+              <span class="bl_contact-form_example">例.ヤマダタロウ</span><!-- /.bl_contact-form_example -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head"><label for="tel" class="bl_contact-form_label">電話番号</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <input type="tel" id="tel" name="tel" class="bl_contact-form_input" required>
+              <span class="bl_contact-form_example">例.09012345678</span><!-- /.bl_contact-form_example -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head"><label for="email" class="bl_contact-form_label">メールアドレス</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <input type="email" id="email" name="email" class="bl_contact-form_input" required>
+              <span class="bl_contact-form_example">例.sample@info</span><!-- /.bl_contact-form_example -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head">お問い合わせ項目<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+             <ul class="bl_contact-form_radio-list">
+              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-a" class="contact-form_radio"/><label for="item-a" class="contact-form_label">資料請求の希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-b" class="contact-form_radio"/><label for="item-b" class="contact-form_label">無料相談のお申込み</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-c" class="contact-form_radio"/><label for="item-c" class="contact-form_label">見積もりの希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+              
+             </ul><!-- /.bl_contact-form_radio-list -->
+          </dd><!-- /.bl_contact-form_detail -->
+          <dt class="bl_contact-form_head">お問い合わせ内容<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+          <dd class="bl_contact-form_detail">
+              <textarea class="bl_contact-form_textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea><!-- /#.bl_contact-form_taxtarea -->
+          </dd><!-- /.bl_contact-form_detail -->
+      </dl><!-- /.bl_contact-form_list -->
+      <div class="bl_contact-form_privacy">
+          <input id="privacy" type="checkbox" class="bl_contact-form_checkbox">
+          <label for="privacy" class="bl_contact-form_checkbox-label"><a href="#" class="bl_contact-form_privacy-link">プライバシーポリシー</a><!-- /.bl_contact-form_privacy-link -->に同意する</label><!-- /.bl_contact-form_checkbox-label -->
+      </div><!-- /.bl_contact-form_privacy -->
+      <div class="bl_contact-forel_btn-wrapper">
+          <div class="el_btn el_btn__right-arrow">
+            <input
+              type="submit"
+              class="el_btn_input"
+              value="送信する"
+            />
+          </div>
+          <!-- /.el_btn -->
+        </div>
+        <!-- /.contact_forel_btn-wrapper -->
+  </form><!-- /.bl_contact-form -->
+  </div>
+    <footer class="bl_footer">
+        <div class="bl_footer_wrapper">
+            <p class="bl_footer_text hp_tac"><small>&copy; Tiice All rights reserved.</small></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -307,3 +307,64 @@
     font-size: 1.6rem;
     margin-top: 24px;
   }
+
+
+  .bl_about_ttl{
+    margin-top: 64px;
+    font-size: 7rem;
+    font-family: var(--section-font);
+    color: var(--gray-color02);
+    text-shadow: 0 4px 4px rgba(#000000, $alpha: 0.3);
+    
+  }
+  .bl_about_contents{
+    margin-top: 64px;
+  }
+  .bl_about_content:not(:first-child){
+    margin-top: 40px;
+
+  }
+  .bl_about_head{
+    font-family: var(--sub-font);
+    font-size: 2.1rem;
+    display:flex;
+    align-items:center;
+  }
+  .bl_about_head::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background-color: #000;
+    margin-right: 8px;
+  }
+  .bl_about_body{
+    margin-top: 16px;
+  }
+  .bl_about_name-text{
+    font-size: 2rem;
+    font-family: var(--bold-gothic);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+  }
+  .bl_about_name-text::before{
+    content: "植田駿介";
+    display: block;
+    font-size: 1.4rem;
+    font-family: var(--sub-font);
+    margin-bottom: 4px;
+  }
+  .bl_about_project-text{
+    font-size: 1.6rem;
+    font-family: var(--bold-gothic);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    line-height: 2;
+  }
+  .bl_about_contact-text{
+    font-size: 1.6rem;
+    font-family: var(--bold-gothic);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    line-height: 2;
+  }
