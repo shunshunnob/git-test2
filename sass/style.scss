@@ -3,6 +3,7 @@
 @use 'setting/index';
 html{
   font-size: 10px;
+  scroll-behavior: smooth;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -12,8 +13,8 @@ html{
   --white-color: #fff;
   --gray-color: #d9d9d9;
   --gray-color02: #6b6767;
-  --gray-color03: #aaa;
-  --gray-color04: #707070;
+  --gray-color03: #373739;
+  --gray-color04: #9d9d9d;
   --primary-color: #43cfe8;
   --primary-color02: #ddf4f6;
   --accent-color: #e84d43;

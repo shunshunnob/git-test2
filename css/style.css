@@ -497,6 +497,62 @@ svg {
   font-family: var(--sub-font);
 }
 
+.bl_footer_wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bl_footer_text {
+  font-size: 2rem;
+  font-family: var(--sub-font);
+  color: var(--gray-color03);
+}
+
+.bl_page-top {
+  position: fixed;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  right: 16px;
+  bottom: 80px;
+}
+
+.bl_card_works {
+  padding: 24px;
+  border: 1px solid var(--gray-color04);
+  border-radius: 8px;
+}
+
+.bl_card_title__works {
+  font-family: var(--bold-gothic);
+  font-size: 2rem;
+}
+
+.bl_card_title01::after {
+  content: "https://gyunikukan.com";
+  display: block;
+  margin-top: 8px;
+  font-family: var(--sub-font);
+  font-size: 1.6rem;
+}
+
+.bl_card_title__02::after {
+  content: "https://DTP-personal.com";
+  display: block;
+  margin-top: 8px;
+  font-family: var(--sub-font);
+  font-size: 1.6rem;
+}
+
+.bl_card_kinds {
+  display: block;
+  font-family: var(--sub-font);
+  font-size: 1.6rem;
+  margin-top: 24px;
+}
+
 .el_logo {
   font-size: 18px;
   font-weight: bold;
@@ -624,8 +680,17 @@ svg {
   background: #000;
 }
 
+.hp_mt60 {
+  margin-top: 60px;
+}
+
+.hp_mb80 {
+  margin-bottom: 80px;
+}
+
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
   line-height: 1;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -636,8 +701,8 @@ html {
   --white-color: #fff;
   --gray-color: #d9d9d9;
   --gray-color02: #6b6767;
-  --gray-color03: #aaa;
-  --gray-color04: #707070;
+  --gray-color03: #373739;
+  --gray-color04: #9d9d9d;
   --primary-color: #43cfe8;
   --primary-color02: #ddf4f6;
   --accent-color: #e84d43;
