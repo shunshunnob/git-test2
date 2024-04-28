@@ -620,6 +620,12 @@ svg {
   line-height: 2;
 }
 
+.bl_contact_ttl {
+  font-size: 7rem;
+  font-family: var(--section-font);
+  color: var(--gray-color02);
+}
+
 .el_logo {
   font-size: 18px;
   font-weight: bold;

@@ -37,65 +37,68 @@
     <header class="bl_header ly_header-inner">
         <h1 class="el_logo"><a href="index.html" class="el_logo-link"><img src="img/logo-img.svg" alt="Tiice" class="el_logo_img" width="84" height="44"></a><!-- /.l_header-inner_logo-link --></h1><!-- /.l_header-inner_logo -->
   </header><!-- /.header -->
-  <div class="ly_container-sm ">
-    <form action="#" class="bl_contact-form">
-      <dl class="bl_contact-form_list">
-          <dt class="bl_contact-form_head"><label for="company" class="bl_contact-form_label">会社名</label><!-- /.bl_contact-form_label --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <input type="text" id="company" name="company" class="bl_contact-form_input">
-              <span class="bl_contact-form_example">例.株式会社SAMPLE</span><!-- /.bl_contact-form_example -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head"><label for="name" class="bl_contact-form_label">お名前</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <input type="text" id="name" name="name" class="bl_contact-form_input" required>
-              <span class="bl_contact-form_example">例.山田太郎</span><!-- /.bl_contact-form_example -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head"><label for="furigana" class="bl_contact-form_label">フリガナ</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <input type="text" id="furigana" name="furigana" class="bl_contact-form_input" required>
-              <span class="bl_contact-form_example">例.ヤマダタロウ</span><!-- /.bl_contact-form_example -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head"><label for="tel" class="bl_contact-form_label">電話番号</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <input type="tel" id="tel" name="tel" class="bl_contact-form_input" required>
-              <span class="bl_contact-form_example">例.09012345678</span><!-- /.bl_contact-form_example -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head"><label for="email" class="bl_contact-form_label">メールアドレス</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <input type="email" id="email" name="email" class="bl_contact-form_input" required>
-              <span class="bl_contact-form_example">例.sample@info</span><!-- /.bl_contact-form_example -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head">お問い合わせ項目<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-             <ul class="bl_contact-form_radio-list">
-              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-a" class="contact-form_radio"/><label for="item-a" class="contact-form_label">資料請求の希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
-              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-b" class="contact-form_radio"/><label for="item-b" class="contact-form_label">無料相談のお申込み</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
-              <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-c" class="contact-form_radio"/><label for="item-c" class="contact-form_label">見積もりの希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
-              
-             </ul><!-- /.bl_contact-form_radio-list -->
-          </dd><!-- /.bl_contact-form_detail -->
-          <dt class="bl_contact-form_head">お問い合わせ内容<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
-          <dd class="bl_contact-form_detail">
-              <textarea class="bl_contact-form_textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea><!-- /#.bl_contact-form_taxtarea -->
-          </dd><!-- /.bl_contact-form_detail -->
-      </dl><!-- /.bl_contact-form_list -->
-      <div class="bl_contact-form_privacy">
-          <input id="privacy" type="checkbox" class="bl_contact-form_checkbox">
-          <label for="privacy" class="bl_contact-form_checkbox-label"><a href="#" class="bl_contact-form_privacy-link">プライバシーポリシー</a><!-- /.bl_contact-form_privacy-link -->に同意する</label><!-- /.bl_contact-form_checkbox-label -->
-      </div><!-- /.bl_contact-form_privacy -->
-      <div class="bl_contact-forel_btn-wrapper">
-          <div class="el_btn el_btn__right-arrow">
-            <input
-              type="submit"
-              class="el_btn_input"
-              value="送信する"
-            />
-          </div>
-          <!-- /.el_btn -->
-        </div>
-        <!-- /.contact_forel_btn-wrapper -->
-  </form><!-- /.bl_contact-form -->
-  </div>
+  <section class="bl_contact hp_mt60">
+      <div class="ly_container-sm ">
+        <h2 class="bl_contact_ttl">Contact</h2><!-- /.bl_contact_ttl -->
+        <form action="#" class="bl_contact-form">
+          <dl class="bl_contact-form_list">
+              <dt class="bl_contact-form_head"><label for="company" class="bl_contact-form_label">会社名</label><!-- /.bl_contact-form_label --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <input type="text" id="company" name="company" class="bl_contact-form_input">
+                  <span class="bl_contact-form_example">例.株式会社SAMPLE</span><!-- /.bl_contact-form_example -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head"><label for="name" class="bl_contact-form_label">お名前</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <input type="text" id="name" name="name" class="bl_contact-form_input" required>
+                  <span class="bl_contact-form_example">例.山田太郎</span><!-- /.bl_contact-form_example -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head"><label for="furigana" class="bl_contact-form_label">フリガナ</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <input type="text" id="furigana" name="furigana" class="bl_contact-form_input" required>
+                  <span class="bl_contact-form_example">例.ヤマダタロウ</span><!-- /.bl_contact-form_example -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head"><label for="tel" class="bl_contact-form_label">電話番号</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <input type="tel" id="tel" name="tel" class="bl_contact-form_input" required>
+                  <span class="bl_contact-form_example">例.09012345678</span><!-- /.bl_contact-form_example -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head"><label for="email" class="bl_contact-form_label">メールアドレス</label><!-- /.bl_contact-form_label --><span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <input type="email" id="email" name="email" class="bl_contact-form_input" required>
+                  <span class="bl_contact-form_example">例.sample@info</span><!-- /.bl_contact-form_example -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head">お問い合わせ項目<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                 <ul class="bl_contact-form_radio-list">
+                  <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-a" class="contact-form_radio"/><label for="item-a" class="contact-form_label">資料請求の希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+                  <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-b" class="contact-form_radio"/><label for="item-b" class="contact-form_label">無料相談のお申込み</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+                  <li class="bl_contact-form_radio-item"><input type="radio" name="content" id="item-c" class="contact-form_radio"/><label for="item-c" class="contact-form_label">見積もりの希望</label><!-- /.contact-form_label --></li><!-- /.bl_contact-form_radio-item -->
+      
+                 </ul><!-- /.bl_contact-form_radio-list -->
+              </dd><!-- /.bl_contact-form_detail -->
+              <dt class="bl_contact-form_head">お問い合わせ内容<span class="bl_contact-form_required">必須</span><!-- /.bl_contact-form_required --></dt><!-- /.bl_contact-form_head -->
+              <dd class="bl_contact-form_detail">
+                  <textarea class="bl_contact-form_textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea><!-- /#.bl_contact-form_taxtarea -->
+              </dd><!-- /.bl_contact-form_detail -->
+          </dl><!-- /.bl_contact-form_list -->
+          <div class="bl_contact-form_privacy">
+              <input id="privacy" type="checkbox" class="bl_contact-form_checkbox">
+              <label for="privacy" class="bl_contact-form_checkbox-label"><a href="#" class="bl_contact-form_privacy-link">プライバシーポリシー</a><!-- /.bl_contact-form_privacy-link -->に同意する</label><!-- /.bl_contact-form_checkbox-label -->
+          </div><!-- /.bl_contact-form_privacy -->
+          <div class="bl_contact-forel_btn-wrapper">
+              <div class="el_btn el_btn__right-arrow">
+                <input
+                  type="submit"
+                  class="el_btn_input"
+                  value="送信する"
+                />
+              </div>
+              <!-- /.el_btn -->
+            </div>
+            <!-- /.contact_forel_btn-wrapper -->
+      </form><!-- /.bl_contact-form -->
+      </div>
+  </section><!-- /.bl_contact -->
     <footer class="bl_footer">
         <div class="bl_footer_wrapper">
             <p class="bl_footer_text hp_tac"><small>&copy; Tiice All rights reserved.</small></p>
