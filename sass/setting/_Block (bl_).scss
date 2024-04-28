@@ -199,3 +199,60 @@
     color: var(--gray-color02);
     text-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.3);
   }
+  .bl_service_items{
+    margin-top: 64px;
+
+  }
+  .bl_service_item:not(:first-child){
+    margin-top: 40px;
+  }
+
+  .bl_service_item-ttl{
+    font-size: 2.4rem;
+    font-family: var(--sub-font);
+    color: var(--gray-color02);
+    position: relative;
+  }
+  .bl_service_item-ttl:after{
+    content: "HEARING";
+    display: block;
+    margin-top: 4px;
+    font-size: 1.6rem;
+    font-family: var(--light-gothic);
+  }
+  .bl_service_item-ttl__design::after{
+    content: "DESIGN";
+  }
+  .bl_service_item-ttl__coding::after{
+    content: "CODING";
+
+  }
+  .bl_service_item-icon{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 37%;
+    width: 24px;
+    height: 24px;
+    background: url(../../img/file-img.jpeg) no-repeat center center/cover;
+  }
+  .bl_sevice_item-icon_design{
+    background: url(../../img/pen-img.jpeg) no-repeat center center/cover;
+    left: 29%;
+  }
+  .bl_service_item-icon__coding{
+    background: url(../../img/pc-img.jpeg) no-repeat center center/cover;
+    left: 43%;
+  }
+  .bl_service_item-txt{
+    font-size: 1.2rem;
+    font-family: var(--sub-font);
+    line-height: 1.3;
+    margin-top: 16px;
+  }
+
+  .bl_cta_txt{
+    font-size: 1.4rem;
+    font-family: var(--sub-font);
+  }
+  

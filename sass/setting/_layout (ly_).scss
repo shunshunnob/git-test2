@@ -45,3 +45,23 @@
       padding: 0 0 0 32px;
     }
   }
+
+.bl_works_ttl{
+  font-size: 7rem;
+  font-family: var(--section-font);
+  color: var(--gray-color02);
+  text-shadow: 0 4px 4px rgba(#000000, $alpha: 0.3);
+}
+  .bl_works_cards{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .bl_card_title {
+    margin-top:8px;
+    font-size:1.4rem;
+    font-family: var(--sub-font);
+  }
+  
