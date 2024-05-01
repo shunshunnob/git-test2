@@ -29,6 +29,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script src="js/main.js" defer></script>
 
 </head>
@@ -70,24 +72,81 @@
     <div class="ly_container-lg hp_mt60 hp_mb80">
       <h2 class="bl_works_ttl">Works</h2><!-- /.bl_works_ttl -->
       <div class="bl_works_cards">
-        <div class="bl_card bl_card_works">
-          <div class="bl_card_img-box">
-            <img class="bl_card_img" src="img/yakiniku-img.jpg" alt="" width="1420" height="865" loading="lazy" decoding="async">
-          </div>
-          <div class="bl_card_body">
-            <h3 class="bl_card_title bl_card_title__works bl_card_title01">牛肉館</h3>
-            <span class="bl_card_kinds">| 企画 | デザイン | コーディング |</span><!-- /.bl_card_kinds -->
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <!-- 背景のオーバーレイ -->
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-1-title"
+            >
+              <header class="modal-header">
+
+                <!-- 閉じるボタン -->
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+              </header>
+              <!-- モーダルのコンテンツ -->
+              <div class="modal-content" id="modal-1-content">
+                <img src="img/yakiniku_lp.jpg" alt="" width="375" height="3385" loading="lazy" decoding="async">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="bl_card bl_card_works">
-          <div class="bl_card_img-box">
-            <img class="bl_card_img" src="img/zim-img.jpg" alt="" width="1421" height="798" loading="lazy" decoding="async">
+        <!-- 開くボタン -->
+        <button data-micromodal-trigger="modal-1" class="modal-open">
+          <div class="bl_card bl_card_works">
+            <div class="bl_card_img-box">
+              <img class="bl_card_img" src="img/yakiniku-img.jpg" alt="" width="1420" height="865" loading="lazy" decoding="async">
+            </div>
+            <div class="bl_card_body">
+              <h3 class="bl_card_title bl_card_title__works bl_card_title01">牛肉館</h3>
+              <span class="bl_card_kinds">| 企画 | デザイン | コーディング |</span><!-- /.bl_card_kinds -->
+            </div>
           </div>
-          <div class="bl_card_body">
-            <h3 class="bl_card_title bl_card_title__works bl_card_title__02">パーソナルジムDTP</h3>
-            <span class="bl_card_kinds">| 企画 | デザイン | コーディング |</span><!-- /.bl_card_kinds -->
+  
+        </button>
+        <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+          <!-- 背景のオーバーレイ -->
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-2-title"
+            >
+              <header class="modal-header">
+                <!-- 閉じるボタン -->
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+              </header>
+              <!-- モーダルのコンテンツ -->
+              <div class="modal-content" id="modal-2-content">
+                <img src="img/zim_lp.jpg" alt="" width="750" height="11718" loading="lazy" decoding="async">
+              </div>
+            </div>
           </div>
         </div>
+        <!-- 開くボタン -->
+        <button data-micromodal-trigger="modal-2" class="modal-open ">
+          <div class="bl_card bl_card_works">
+            <div class="bl_card_img-box">
+              <img class="bl_card_img" src="img/zim-img.jpg" alt="" width="1421" height="798" loading="lazy" decoding="async">
+            </div>
+            <div class="bl_card_body">
+              <h3 class="bl_card_title bl_card_title__works bl_card_title__02">パーソナルジムDTP</h3>
+              <span class="bl_card_kinds">| 企画 | デザイン | コーディング |</span><!-- /.bl_card_kinds -->
+            </div>
+          </div>
+        </button>
+
       </div><!-- /.bl_works_cards -->
     </div><!-- /.ly_container-lg -->
   </section><!-- /.bl_works -->

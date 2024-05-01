@@ -1,7 +1,11 @@
 // ヘッダー
 .bl_header{
     height: 80px;
-    
+  }
+  @media screen and (min-width: 768px) {
+    .bl_header{
+      height: 136px;
+    }
   }
   .bl_header_nav {
     position: fixed;
@@ -38,10 +42,10 @@
   @media screen and (min-width: 768px) {
     .bl_header_nav-list {
       display: flex;
-      position: static;
-      transform: none;
       height: 100%;
-      
+      position: static;
+      transform: translate(0,0);
+      max-width: 100%;
     }
   }
   
@@ -75,8 +79,8 @@
   @media screen and (min-width: 768px) {
     .bl_header_nav-link{
         height: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: clamp(2rem, -0.286rem + 2.976vw, 4rem);
+        padding-right: clamp(2rem, -0.286rem + 2.976vw, 4rem);
     }
   }
   .bl_header_text-en{
@@ -95,6 +99,11 @@
     width: 88px;
     margin-left: 24px;
   }
+  @media screen and (min-width: 768px) {
+    .bl_header_text-en::after{
+      display: none;
+    }
+  }
   .bl_header_text-ja{
     font-size: 1.4rem;
     font-family: var(--sub-font);
@@ -103,22 +112,71 @@
     width: auto;
     
   }
+  @media screen and (min-width: 768px) {
+    .bl_header_text-ja{
+      display: none;
+    }
+  }
+  .js_header-accordion{
+    position: relative;
+  }
+  .js_header-accordion::after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid ;
+    border-right: 1px solid;
+    transform:translateX(-20%) rotate(45deg);
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 96px;
+    transition: 0.3s;
+  }
+  @media screen and (min-width: 768px) {
+    .js_header-accordion::after{
+      left: 136px;
+      top: 60px;
+    }
+  }
+  .js_header-accordion.is_open::after{
+    transform: rotate(135deg);
+  }
+  @media screen and (min-width: 768px) {
+    .js_header-accordion{
+      padding: 0 40px;
+      position: relative;
+    }
+  }
+
   .bl_header_accordion-body{
     margin-top: 24px;
   }
-
+@media screen and (min-width: 768px) {
+  .bl_header_accordion-body{
+    position: absolute;
+    top: 72px;
+  }
+}
   .bl_header_accordion-list{
     margin-left: 32px;
-    height: 0;
-    
+    opacity: 0;
+    visibility: hidden;
     transition: 0.3s;
+    transform: translateY(-50px);
+  }
+  @media screen and (min-width: 768px) {
+    .bl_header_accordion-list{
+      margin-left: 0;
+    }
   }
   .bl_header_accordion-list.is_open{
-    height: 120px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   .bl_header_accordion-item:not(:first-child){
     margin-top: 24px;
-    
   }
   .bl_hamburger {
     width: 40px;
@@ -199,19 +257,40 @@
     color: var(--gray-color02);
     text-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.3);
   }
+  @media screen and (min-width: 768px) {
+    .bl_service_ttl{
+      font-size: 10rem;
+    }
+  }
   .bl_service_items{
     margin-top: 64px;
+    overflow-x: hidden;
 
+  }
+  .bl_service_item {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30%);
+    transition: 0.6s;
   }
   .bl_service_item:not(:first-child){
     margin-top: 40px;
   }
-
+@media screen and (min-width: 768px) {
+  .bl_service_item:not(:first-child){
+    margin-top: 80px;
+  }
+}
   .bl_service_item-ttl{
     font-size: 2.4rem;
     font-family: var(--sub-font);
     color: var(--gray-color02);
     position: relative;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_service_item-ttl{
+      font-size: 3.2rem;
+    }
   }
   .bl_service_item-ttl:after{
     content: "HEARING";
@@ -231,24 +310,46 @@
     content: "";
     display: inline-block;
     position: absolute;
-    left: 37%;
+    left: 128px;
     width: 24px;
     height: 24px;
     background: url(../../img/file-img.jpeg) no-repeat center center/cover;
   }
+  @media screen and (min-width: 768px) {
+    .bl_service_item-icon{
+      left: 168px;
+      width: 28px;
+      height: 28px;
+    }
+  }
   .bl_sevice_item-icon_design{
     background: url(../../img/pen-img.jpeg) no-repeat center center/cover;
-    left: 29%;
+    left: 104px;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_sevice_item-icon_design{
+      left: 128px;
+    }
   }
   .bl_service_item-icon__coding{
     background: url(../../img/pc-img.jpeg) no-repeat center center/cover;
-    left: 43%;
+    left: 152px;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_service_item-icon__coding{
+      left: 200px;
+    }
   }
   .bl_service_item-txt{
     font-size: 1.2rem;
     font-family: var(--sub-font);
     line-height: 1.3;
     margin-top: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_service_item-txt{
+      font-size: 1.8rem;
+    }
   }
 
   .bl_cta_txt{
@@ -275,7 +376,37 @@
     height: 48px;
     right: 16px;
     bottom: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.3s;
   }
+  .bl_page-top.is_upMove{
+    opacity: 1;
+    transform: translateY(0);
+  }
+@media screen and (min-width: 768px) {
+  .bl_page-top{
+    right: 32px;
+  }
+}
+.bl_works_cards{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 768px) {
+  .bl_works_cards{
+    
+    flex-direction: row;
+    
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bl_card:not(:first-child){
+    margin-top: 0;
+  }
+}
 
   .bl_card_works{
     padding: 24px;
@@ -285,6 +416,9 @@
   .bl_card_title__works{
     font-family: var(--bold-gothic);
     font-size: 2rem;
+  }
+  .bl_card_body{
+    text-align: left;
   }
   .bl_card_title01::after{
     content: "https://gyunikukan.com";
@@ -307,6 +441,19 @@
     font-size: 1.6rem;
     margin-top: 24px;
   }
+  .bl_works_ttl{
+    font-size: 7rem;
+  }
+@media screen and (min-width: 768px) {
+  .bl_works_ttl{
+    font-size: 10rem;
+    margin-top: 80px;
+  }
+}
+  .bl_works_page-link{
+    font-size: 1.4rem;
+    font-family: var(--sub-font);
+  }
 
 
   .bl_about_ttl{
@@ -317,6 +464,12 @@
     text-shadow: 0 4px 4px rgba(#000000, $alpha: 0.3);
     
   }
+  @media screen and (min-width: 768px) {
+    .bl_about_ttl{
+      margin-top: 128px;
+      font-size: 10rem;
+    }
+  }
   .bl_about_contents{
     margin-top: 64px;
   }
@@ -324,11 +477,22 @@
     margin-top: 40px;
 
   }
+  @media screen and (min-width: 768px) {
+    .bl_about_content:not(:first-child){
+      margin-top: 80px;
+    }
+  }
   .bl_about_head{
     font-family: var(--sub-font);
     font-size: 2.1rem;
     display:flex;
     align-items:center;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_about_head{
+      font-size: 4.2rem;
+      align-items: normal;
+    }
   }
   .bl_about_head::before{
     content: "";
@@ -337,6 +501,12 @@
     height: 24px;
     background-color: #000;
     margin-right: 8px;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_about_head::before{
+      height: 40px;
+      margin-right: 12px;
+    }
   }
   .bl_about_body{
     margin-top: 16px;
@@ -347,12 +517,23 @@
     padding-bottom: 8px;
     border-bottom: 1px solid #000;
   }
+  @media screen and (min-width: 768px) {
+    .bl_about_name-text{
+      font-size: 2.4rem;
+      padding-bottom: 16px;
+    }
+  }
   .bl_about_name-text::before{
     content: "植田駿介";
     display: block;
     font-size: 1.4rem;
     font-family: var(--sub-font);
     margin-bottom: 4px;
+  }
+  @media screen and (min-width: 768px) {
+    .bl_about_name-text::before{
+      font-size: 1.8rem;
+    }
   }
   .bl_about_project-text{
     font-size: 1.6rem;
@@ -361,6 +542,12 @@
     border-bottom: 1px solid #000;
     line-height: 2;
   }
+  @media screen and (min-width: 768px) {
+    .bl_about_project-text{
+      font-size: 2rem;
+      padding-bottom: 16px;
+    }
+  }
   .bl_about_contact-text{
     font-size: 1.6rem;
     font-family: var(--bold-gothic);
@@ -368,9 +555,146 @@
     border-bottom: 1px solid #000;
     line-height: 2;
   }
-
+@media screen and (min-width: 768px) {
+  .bl_about_contact-text{
+    font-size: 2.2rem;
+    padding-bottom: 16px;
+  }
+}
   .bl_contact_ttl{
     font-size: 7rem;
     font-family: var(--section-font);
     color: var(--gray-color02);
+  }
+
+
+  // コンタクトセクション
+  .bl_contact-form{
+    margin-top: 64px;
+  }
+  .bl_contact-form_detail{
+    margin-top: 8px;
+  }
+  .bl_contact-form_head{
+    font-size: 2.1rem;
+    font-family: var(--bold-gothic);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  .bl_contact-form_required{
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    width: 40px;
+    height: 24px;
+    font-size: 12px;
+    font-family: var(--bold-gothic);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: 8px;
+  }
+  .bl_contact-form_any{
+    background-color: var(--gray-color);
+    color: var(--gray-color02);
+    width: 40px;
+    height: 24px;
+    font-size: 12px;
+    font-family: var(--bold-gothic);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: 8px;
+  }
+  .bl_contact-form_head:not(:first-child){
+    margin-top: 24px;
+  }
+  .bl_contact-form_input{
+    border: 1px solid var(--gray-color04);
+    width: 100%;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .bl_contact-form_example{
+    display: block;
+    font-size: 12px;
+    color: var(--gray-color02);
+    margin-top: 8px;
+  }
+  .bl_contact-form_checkbox-list{
+    margin-top: 24px;
+  }
+  .bl_contact-form_checkbox-item:not(:first-child){
+    margin-top: 16px;
+
+  }
+  .bl_contact-form_radio-item{
+    background-color: var(--gray-color02);
+    height: 48px;
+    display:flex;
+  }
+  .bl_contact-form_checkbox-item:not(:first-child){
+    margin-top: 32px;
+  }
+  .contact-form_radio{
+   margin-left: 16px;
+  }
+  .contact-form_checkbox-label{
+    font-size: 2rem;
+    font-family: var(--sub-font);
+    margin-left: 8px;
+  }
+  .contact-form_checkbox{
+    width: 16px;
+    height: 16px;
+  }
+  .bl_contact-form_label{
+    font-size: 22px;
+    font-family: var(--bold-gothic);
+    color: var(--gray-color02);
+    // width: 100%;
+    // height: 100%;
+    display:flex;
+    align-items:center;
+  }
+   .bl_contact-form_textarea{
+    width: 100%;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    padding: 16px 8px;
+    height: 240px;
+    border: 1px solid var(--gray-color04);
+    border-radius: 4px;
+   }
+   .bl_contact-form_annotation{
+    margin-top: 8px;
+    font-size: 1.4rem;
+    font-family: var(--sub-font);
+   }
+   .bl_contact-form_privacy{
+    margin-top: 64px;
+    padding: 8px 0;
+    background-color: var(--gray-color02);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 16px;
+   }
+   .bl_contact-form_checkbox{
+    width: 24px;
+    height: 24px;
+   
+   }
+   .bl_contact-form_checkbox-label{
+    font-weight: bold;
+    font-size: 14px;
+   }
+  .bl_contact-form_privacy-link{
+    color: var(--primary-color);
+    text-decoration: underline var(--primary-color);
+    text-underline-offset: 2px;
+  }
+  .bl_contact-forel_btn-wrapper{
+    margin-top: 64px;
+  
   }

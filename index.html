@@ -29,6 +29,8 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body class="js_body">
@@ -77,15 +79,15 @@
           <div class="ly_contents">
             <h2 class="bl_service_ttl">Service</h2><!-- /.bl_service_ttl -->
             <div class="bl_service_items">
-              <div class="bl_service_item">
+              <div class="bl_service_item js_hearing">
                 <p class="bl_service_item-ttl">ヒアリング<span class="bl_service_item-icon"></span><!-- /.bl_srvice_item-icon --></p><!-- /.bl_service_item-ttl -->
                 <p class="bl_service_item-txt">制作に入る前にお客様の要望をヒアリング致します。WEB制作・デザインは問題解決です。お客様が求める結果を出すには何が必要か、何が必要でないかを明確にし、WEBサイトを作るにあったての最も重要な土台作りを丁寧に行います。</p><!-- /.bl_service_item-txt -->
               </div><!-- /.bl_service_item -->
-              <div class="bl_service_item">
+              <div class="bl_service_item js_design">
                 <p class="bl_service_item-ttl bl_service_item-ttl__design">デザイン<span class="bl_service_item-icon bl_sevice_item-icon_design"></span><!-- /.bl_srvice_item-icon --></p><!-- /.bl_service_item-ttl -->
                 <p class="bl_service_item-txt">ディレクションにより明確化した問題解決のプランに基づいてデザインを作成いたします。WEBサイトを利用する全ての人が正しく情報を理解できるか、お客様の求める行動を起こすための動線作りをが出来ているかを意識しています。デザインは見る人を魅せるものではなく、見る人を動かすものということを大事にしております。</p><!-- /.bl_service_item-txt -->
               </div><!-- /.bl_service_item -->
-              <div class="bl_service_item">
+              <div class="bl_service_item js_coding">
                 <p class="bl_service_item-ttl bl_service_item-ttl__coding">コーディング<span class="bl_service_item-icon bl_service_item-icon__coding"></span><!-- /.bl_srvice_item-icon --></p><!-- /.bl_service_item-ttl -->
                 <p class="bl_service_item-txt">デザインが伝えようとしていることをより伝わりやすくするための動きや効果を適切に加えます。
                   また、WEBサイトを利用する全てのユーザーに対して同様の使用感になるように心掛けております。
@@ -99,7 +101,7 @@
       <section class="bl_works">
         <div class="ly_container-lg">
           <h2 class="bl_works_ttl">Works</h2><!-- /.bl_works_ttl -->
-          <div class="bl_works_cards">
+          <div class="bl_works_cards ">
             <div class="bl_card">
               <div class="bl_card_img-box">
                 <img class="bl_card_img" src="img/yakiniku-img.jpg" alt="" width="1420" height="865" loading="lazy" decoding="async">
@@ -110,26 +112,28 @@
             </div>
             <div class="bl_card">
               <div class="bl_card_img-box">
-                <img class="bl_card_img" src="img/zim-img.jpg" alt="" width="1421" height="798" loading="lazy" decoding="async">
+                <img class="bl_card_img" src="img/zim-img.jpg" alt="" width="1420" height="864" loading="lazy" decoding="async">
               </div>
               <div class="bl_card_body">
                 <h3 class="bl_card_title">DTP-personal.com</h3>
               </div>
             </div>
           </div><!-- /.bl_works_cards -->
+          <p class="bl_works_page-link hp_mt60">制作実績の一覧はこちらから</p><!-- /.bl_works_page-link -->
+          <a href="works.html" class="el_btn-link ">過去の制作実績を見る</a><!-- /.el_corp-link -->
         </div><!-- /.ly_container-lg -->
       </section><!-- /.bl_works -->
       <div class="bl_cta">
         <div class="ly_container-lg">
           <div class="ly_contents">
             <div class="bl_ata_content">
-              <p class="bl_cta_txt">専用フォームからもご依頼いただけます</p><!-- /.bl_cta_txt -->
+              <p class="bl_cta_txt">制作依頼、お問い合わせはこちらから</p><!-- /.bl_cta_txt -->
               <a href="contact.html" class="el_btn-link">ご依頼専用フォーム</a><!-- /.el_corp-link -->
             </div><!-- /.bl_ata_content -->
           </div><!-- /.ly_contents -->
         </div><!-- /.ly_container-lg -->
       </div><!-- /.bl_cta -->
-              <a href="#" class="bl_page-top">
+              <a href="#" class="bl_page-top js_return">
                 <img src="/img/pagetop.svg" alt="トップへ戻る" width="70" height="70" loading="lazy">
               </a><!-- /.bl_page-top -->
       

@@ -2,6 +2,12 @@
     font-size: 18px;
     font-weight: bold;
   }
+@media screen and (min-width: 768px) {
+  .el_logo{
+    width: 120px;
+    height: 72px;
+  }
+}
 .el_btn-link{
   display:flex;
   align-items:center;
@@ -22,4 +28,14 @@
 .el_btn-link:focus-visible{
   transform: scale(1.05);
   box-shadow: 0 2px 14px  var(--black-color);
+}
+
+.el_btn{
+  width: 168px;
+  height: 64px;
+  background-color: #000;
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
